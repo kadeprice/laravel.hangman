@@ -1,0 +1,86 @@
+@import url(//fonts.googleapis.com/css?family=Lato:700);
+
+body {
+        font-family:'Lato', sans-serif;
+        text-align:center;
+        width:1024px;
+        margin:auto !important; 
+/*                        background:url(./images/boyscoutlogo.jpg) no-repeat;
+        background-size:cover;
+        webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;*/
+}
+
+#wrapper {
+        width: 100%;
+        height:100%;
+        margin-top:75px;
+        background:rgb(0,0,0) ;
+        background: rgba(255,255,255, 0.9); 
+}
+.content{
+    color:#000;
+}
+
+a, a:visited {
+        text-decoration:none;
+}
+
+h1 {
+        font-size: 32px;
+        margin: 16px 0 0 0;
+}
+.drop-shadow {
+        -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+}
+.border-all{
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        padding:10px;
+}
+.border-top-radius {
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+}
+.border-right-radius {
+        border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.border-bottom-radius {
+  border-bottom-right-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+.border-left-radius {
+  border-bottom-left-radius: 5px;
+     border-top-left-radius: 5px;
+}
+.form{
+    background-color:#245269;
+    text-align:left;
+    padding:10px;
+    color:#FFF;
+}
+
+#sidemenu{
+    text-align:left;
+    font-size:.5em;
+    width:200px;
+    display: table-row;
+    background-color: #003333;
+    margin-left:10px;
+}
+
+#sidemenu ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    
+}
+.flash {
+  border:1px solid #000;
+  background-color: #428bca;
+}
