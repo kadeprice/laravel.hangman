@@ -13,5 +13,11 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+    if(!Session::has("word")) Session::put('word',file_get_contents("http://randomword.setgetgo.com/get.php"));
+    return View::make('home');
+});
+
+Route::get("/generateword",function(){
+     Session::put('word',file_get_contents("http://randomword.setgetgo.com/get.php"));
+    return Redirect::back();
 });
