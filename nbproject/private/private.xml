@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/var/www/html/hangman/app/routes.php</file>
+            <file>file:/var/www/html/hangman/composer.json</file>
+            <file>file:/var/www/html/hangman/app/models/Words.php</file>
+            <file>file:/var/www/html/hangman/app/views/home.blade.php</file>
             <file>file:/var/www/html/hangman/app/config/app.php</file>
+            <file>file:/var/www/html/hangman/app/views/layouts/default.blade.php</file>
+            <file>file:/var/www/html/hangman/app/views/navigation/menu.blade.php</file>
         </group>
     </open-files>
 </project-private>

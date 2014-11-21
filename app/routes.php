@@ -13,11 +13,13 @@
 
 Route::get('/', function()
 {
-    if(!Session::has("word")) Session::put('word',file_get_contents("http://randomword.setgetgo.com/get.php"));
+    if(!Session::has("word")) Words::get ();
     return View::make('home');
 });
 
 Route::get("/generateword",function(){
-     Session::put('word',file_get_contents("http://randomword.setgetgo.com/get.php"));
-    return Redirect::back();
+    Words::get ();
+    return Redirect::to("/");
 });
+
+Route::post('guess/{guess}','WordController@guess');

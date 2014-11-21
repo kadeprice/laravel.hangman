@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Laravel PHP Framework</title>
+	<title>Hangman!</title>
         <!-- Latest compiled and minified CSS -->
         <!-- Optional theme -->
         {{ HTML::style('css/bootstrap.min.css'); }}
@@ -16,15 +16,15 @@
         
         <style>
              .fade {
-    opacity: 0;
-    -webkit-transition: opacity 0.15s linear;
-    -moz-transition: opacity 0.15s linear;
-    -o-transition: opacity 0.15s linear;
-    transition: opacity 0.15s linear;
-}
-.fade.in {
-    opacity: 1;
-}
+                opacity: 0;
+                -webkit-transition: opacity 0.15s linear;
+                -moz-transition: opacity 0.15s linear;
+                -o-transition: opacity 0.15s linear;
+                transition: opacity 0.15s linear;
+            }
+            .fade.in {
+                opacity: 1;
+            }
         </style>
         
         
@@ -36,8 +36,10 @@
     <!--Content Section-->
     <div id="wrapper" class="drop-shadow border-all">
         
-    <!--Flash message-->
-        @if (Session::get('flash_message'))
+    
+        @yield('content') 
+        <!--Flash message-->
+        @if (Session::get('notification'))
         <script>
             window.setTimeout(function () {
                 $("#myAlert").fadeOut(3000);
@@ -45,10 +47,9 @@
         </script>
             <div id='myAlert' class='alert alert-warning alert-dismissable fade in' data-alert='alert'>
                 <button type="button" class="close" data-dismiss="alert">×</button>
-                <h3>{{ Session::get('flash_message') }}</h3>
+                <h3>{{ Session::get('notification') }}</h3>
             </div>
         @endif
-        @yield('content')        
     </div>
 	
 </body>
