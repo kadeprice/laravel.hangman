@@ -4,7 +4,9 @@
 
 <p>
 CSS framework: Bootstrap <br/>
-PHP framework: Laravel
+PHP framework: Laravel <br/>
+Words are randomly selected from an online resource.
+
 </p>
 The MIT License (MIT)
 
