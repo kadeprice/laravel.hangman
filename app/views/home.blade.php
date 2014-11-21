@@ -26,7 +26,7 @@
                 {{ Form::open(["action" => "WordController@guess", 'class' => 'form-horizontal', 'role' => 'form']) }}
                 <div class="form-group">
                     {{ Form::label('guess',"Guess a Letter", ['class' => 'text-muted control-label lead']) }}
-                    {{ Form::text('guess',null,["class" =>"form-control text-center", "autofocus" => "autofocus", "maxlength" => 1]) }}
+                    {{ Form::text('guess',null,["class" =>"form-control text-center", "autofocus" => "autofocus", "maxlength" => 1, "autocomplete" => "off"]) }}
                 </div>
                 <div class="form-group">
                     {{ Form::submit("Make a Guess!",['class' => 'btn btn-md btn-info']) }}
