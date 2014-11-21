@@ -2,9 +2,10 @@
 
 @section('content')
 <div class="content">
+    
+    <h1 class='text-info'>Welcome to Hangman</h1><hr/>
     <div class="container">
         
-            <h1 class='text-info'>Welcome to Hangman</h1>
         <div class="row col-sm-4">
             {{ HTML::image("images/".count(Session::get('wrong')).".gif", "Hangman") }}
         </div>
