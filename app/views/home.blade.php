@@ -22,12 +22,14 @@
 
             @if(!Session::has('solved') AND !Session::has('died') )
                 <h3>{{ Session::get('displayWord') }}</h3>
-
-                {{ Form::open(["action" => "WordController@guess"]) }}
-                    {{ Form::label('guess',"Guess", ['class' => 'text-muted']) }}
-                    {{ Form::text('guess',null,["placeholder" => 'Guess']) }}
-                    <br/>
-                    {{ Form::submit("Make a Guess!") }}
+                {{ Form::open(["action" => "WordController@guess", 'class' => 'form-horizontal', 'role' => 'form']) }}
+                <div class="form-group">
+                    {{ Form::label('guess',"Guess a Letter", ['class' => 'text-muted control-label lead']) }}
+                    {{ Form::text('guess',null,["class" =>"form-control text-center", "autofocus" => "autofocus", "maxlength" => 1]) }}
+                </div>
+                <div class="form-group">
+                    {{ Form::submit("Make a Guess!",['class' => 'btn btn-md btn-info']) }}
+                </div>
                 {{ Form::close() }}
             @endif
         </div>
