@@ -19,6 +19,7 @@
 
             @if(Session::has('solved'))
                 <h1 class='text-primary'>You Solved it!!</h1>
+                <h3>{{ Session::get('word') }}</h3>
             @endif
 
             @if(!Session::has('solved') AND !Session::has('died') )
