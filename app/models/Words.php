@@ -3,9 +3,9 @@
 class Words extends \Eloquent {
     public static function get(){
         Session::flush();
-        Session::put('word',file_get_contents("http://randomword.setgetgo.com/get.php"));
-//        Session::put('word', "Test");
-        $word = Session::get('word');
+        Session::put('word',trim(file_get_contents("http://randomword.setgetgo.com/get.php")));
+//        Session::put('word', "demeritoriously");
+        $word = trim(Session::get('word'));
         for ($i=0; $i<strlen($word); $i++) {  
                 Session::put("displayWord",Session::get("displayWord")."-");
         } 
