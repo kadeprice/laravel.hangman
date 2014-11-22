@@ -13,17 +13,22 @@
         <div class="row col-sm-4">
             @if(Session::has('died'))
                 <h1 class="text-danger">You have Died!</h1>
-                <p>The word was <strong> {{ Session::get('word') }} </strong> </p>
+                <p>
+                    The word was <strong> {{ Session::get('word') }} </strong> <br/>
+                {{ Words::grab_xml_definition() }}
+                </p>
                 <p> Click Generate a Word to try again. </p>
             @endif
 
             @if(Session::has('solved'))
                 <h1 class='text-primary'>You Solved it!!</h1>
                 <h3>{{ Session::get('word') }}</h3>
+                <p>{{ Words::grab_xml_definition() }}</p>
             @endif
 
             @if(!Session::has('solved') AND !Session::has('died') )
                 <h3>{{ Session::get('displayWord') }}</h3>
+               
                 {{ Form::open(["action" => "WordController@guess", 'class' => 'form-horizontal', 'role' => 'form']) }}
                 <div class="form-group">
                     {{ Form::label('guess',"Guess a Letter", ['class' => 'text-muted control-label lead']) }}
@@ -33,6 +38,12 @@
                     {{ Form::submit("Make a Guess!",['class' => 'btn btn-md btn-info']) }}
                 </div>
                 {{ Form::close() }}
+                <a href='definition' class='btn btn-sm btn-danger'>Help</a>
+                @if(Session::has('definition'))
+                    <div>
+                        {{ Session::get('definition') }}
+                    </div>
+                @endif
             @endif
         </div>
         

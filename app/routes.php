@@ -23,3 +23,10 @@ Route::get("/generateword",function(){
 });
 
 Route::post('guess/{guess}','WordController@guess');
+
+Route::get('definition',function(){
+    $def = trim(Words::grab_xml_definition( ));
+//    return $def;
+    Session::put("definition",$def);
+    return Redirect::to("/");
+});
