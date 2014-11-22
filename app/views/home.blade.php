@@ -38,7 +38,9 @@
                     {{ Form::submit("Make a Guess!",['class' => 'btn btn-md btn-info']) }}
                 </div>
                 {{ Form::close() }}
-                <a href='definition' class='btn btn-sm btn-danger'>Help</a>
+                @if(count(Session::get('wrong')) > 2)
+                    <a href='definition' class='btn btn-sm btn-danger'>Help</a>
+                @endif
                 @if(Session::has('definition'))
                     <div>
                         {{ Session::get('definition') }}
